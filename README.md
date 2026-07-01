@@ -1,17 +1,16 @@
-# Log Integrity & String Comparison Tool
+# Competitive Programming: String Comparison Algorithm
 
-## 🛡️ Defensive Overview
-In cybersecurity, ensuring data integrity is critical. When analyzing two configuration files, security logs, or cryptographic outputs, standard visual inspection is inefficient. 
+## 📝 Problem Description
+This C++ program takes two strings, `s` and `t`, as input from the user. It iterates through both strings simultaneously to find the first position (1-indexed) where the characters differ. 
 
-This C++ utility automates the process by performing a high-performance, byte-by-byte comparison between two strings (such as file hashes, network packet signatures, or log entries) to pinpoint the exact index of any discrepancy or unauthorized modification.
+* If a mismatch is found, it immediately prints the 1-based index of that mismatch and terminates.
+* If both strings are completely identical, it outputs `YES`.
 
-## 🚀 Key Features
-* **Fast I/O Optimization:** Utilizes `ios_base::sync_with_stdio(false)` and `cin.tie(nullptr)` for optimized execution speed, making it suitable for processing large streams of log data.
-* **Exact Mismatch Pinpointing:** Immediately returns the **1-based index** of the first mismatched character, allowing analysts to quickly locate tampered data.
-* **Integrity Validation:** Outputs `YES` if both data streams are identical, confirming that no data tampering has occurred.
+## 🚀 Optimization Features
+* `ios_base::sync_with_stdio(false);` and `cin.tie(nullptr);` are utilized to untie C++ streams from C standard streams, significantly speeding up Input/Output (I/O) operations for competitive programming platforms.
 
-## 🛠️ Compilation and Execution
-Compile the source code using any modern C++ compiler:
+## 🛠️ How to Compile and Run
+You can compile this code using any standard `g++` compiler:
 ```bash
-g++ -O3 main.cpp -o integrity_checker
-./integrity_checker
+g++ -O3 main.cpp -o main
+./main
